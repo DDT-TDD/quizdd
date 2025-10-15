@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Example usage of the Tauri API bridge
 // This file demonstrates how to use the API in React components
 

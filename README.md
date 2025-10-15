@@ -15,7 +15,6 @@ Quick links
 - Backend (Tauri/Rust): `src-tauri/`
 - Frontend (React/TS): `src/`
 - Seeder & DB tools: `src-tauri/src/bin/seed_database.rs`, `src-tauri/src/services/content_seeder.rs`
-- Recent changelog and fixes: `COMPLETE_QUIZ_FIXES.md`, `FLAGPEDIA_MIGRATION_COMPLETE.md`, `SCORING_FIX_COMPLETE.md`
 
 Getting started (development)
 -----------------------------

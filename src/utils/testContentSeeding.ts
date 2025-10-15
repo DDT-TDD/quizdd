@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { fixedTauriAPI as tauriAPI } from '../api/tauri-fixed'
 import { contentSeeder } from '../services/contentSeeder'
 

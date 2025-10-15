@@ -148,6 +148,31 @@ export function SettingsPanel() {
       </div>
 
       <div className={styles.content}>
+        {/* Access Info Banner */}
+        {settings.parentalControlsEnabled && !parentalAccess && (
+          <div className={styles.infoBanner}>
+            <span className={styles.infoIcon}>ℹ️</span>
+            <div className={styles.infoText}>
+              <strong>Limited Access Mode</strong>
+              <p>
+                Some settings are protected by parental controls. 
+                You can freely change: Theme, Font Size, Sound, and Animations.
+                To modify protected settings (marked with 🔒), you'll need to solve a verification challenge.
+              </p>
+            </div>
+          </div>
+        )}
+        
+        {settings.parentalControlsEnabled && parentalAccess && (
+          <div className={styles.successBanner}>
+            <span className={styles.successIcon}>✅</span>
+            <div className={styles.successText}>
+              <strong>Full Access Granted</strong>
+              <p>You can now modify all settings including parental controls.</p>
+            </div>
+          </div>
+        )}
+
         {/* Theme Settings */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Theme</h2>
@@ -327,11 +352,13 @@ export function SettingsPanel() {
 
         {/* Parental Controls */}
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Parental Controls</h2>
+          <h2 className={styles.sectionTitle}>Parental Controls {settings.parentalControlsEnabled && !parentalAccess && '🔒'}</h2>
           
           <div className={styles.settingGroup}>
             <div className={styles.toggleSetting}>
-              <label className={styles.settingLabel}>Enable Parental Controls</label>
+              <label className={styles.settingLabel}>
+                Enable Parental Controls {settings.parentalControlsEnabled && !parentalAccess && '🔒'}
+              </label>
               <button
                 className={`${styles.toggle} ${settings.parentalControlsEnabled ? styles.toggleOn : ''}`}
                 onClick={() => requireParentalAccess(() => 
@@ -344,12 +371,15 @@ export function SettingsPanel() {
             </div>
             <p className={styles.settingDescription}>
               Require parental permission for sensitive settings
+              {settings.parentalControlsEnabled && !parentalAccess && ' (Verification required to change)'}
             </p>
           </div>
 
           <div className={styles.settingGroup}>
             <div className={styles.toggleSetting}>
-              <label className={styles.settingLabel}>Auto-Save Progress</label>
+              <label className={styles.settingLabel}>
+                Auto-Save Progress {settings.parentalControlsEnabled && !parentalAccess && '🔒'}
+              </label>
               <button
                 className={`${styles.toggle} ${settings.autoSave ? styles.toggleOn : ''}`}
                 onClick={() => requireParentalAccess(() => 
@@ -362,6 +392,7 @@ export function SettingsPanel() {
             </div>
             <p className={styles.settingDescription}>
               Automatically save quiz progress and achievements
+              {settings.parentalControlsEnabled && !parentalAccess && ' (Verification required to change)'}
             </p>
           </div>
         </section>
@@ -373,10 +404,12 @@ export function SettingsPanel() {
               className={styles.resetButton}
               onClick={() => requireParentalAccess(resetToDefaults)}
             >
+              {settings.parentalControlsEnabled && !parentalAccess && '🔒 '}
               Reset to Defaults
             </button>
             <p className={styles.settingDescription}>
               Reset all settings to their default values
+              {settings.parentalControlsEnabled && !parentalAccess && ' (Requires verification)'}
             </p>
           </div>
         </section>
@@ -386,13 +419,7 @@ export function SettingsPanel() {
       {showParentalGate && (
         <div className={styles.modalOverlay}>
           <div className={styles.modalContent}>
-            <ParentalGate />
-            <button
-              className={styles.closeGateButton}
-              onClick={() => setShowParentalGate(false)}
-            >
-              Cancel
-            </button>
+            <ParentalGate onClose={() => setShowParentalGate(false)} />
           </div>
         </div>
       )}

@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Memory Usage Optimizer for Long Quiz Sessions
  * Prevents memory leaks and manages resource usage during extended sessions

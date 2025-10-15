@@ -12,7 +12,7 @@ interface ContentStats {
 }
 
 interface Subject {
-  id: number
+  id?: number
   name: string
   display_name: string
   icon_path?: string

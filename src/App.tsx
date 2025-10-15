@@ -3,11 +3,7 @@ import { AppProvider, useAppContext } from './contexts/AppContext'
 import { AppShell } from './components/AppShell'
 import { ErrorBoundary } from './components/ErrorBoundary'
 import OfflineStatus from './components/OfflineStatus'
-import OfflineVerificationPanel from './components/OfflineVerificationPanel'
 import { contentSeeder } from './services/contentSeeder'
-import { contentCacheService } from './services/contentCacheService'
-import { dataPrivacyService } from './services/dataPrivacyService'
-import { loadAndApplySettings } from './services/settingsService'
 import { audioService } from './services/audioService'
 import styles from './App.module.css'
 
@@ -152,40 +148,11 @@ function AppContent() {
 
   console.log('🔍 Frontend: AppContent render - isLoading:', state.isLoading, 'error:', state.error)
 
-  // Add visible debug overlay
-  const DebugOverlay = () => (
-    <div style={{
-      position: 'fixed',
-      top: '10px',
-      right: '10px',
-      background: 'rgba(0,0,0,0.9)',
-      color: '#0f0',
-      padding: '15px',
-      fontFamily: 'monospace',
-      fontSize: '11px',
-      maxWidth: '300px',
-      borderRadius: '8px',
-      zIndex: 99999,
-      border: '2px solid #0f0'
-    }}>
-      <div style={{fontWeight: 'bold', marginBottom: '8px', color: '#ff0'}}>🔍 DEBUG STATUS</div>
-      <div>Loading: {state.isLoading ? 'YES' : 'NO'}</div>
-      <div>Error: {state.error || 'None'}</div>
-      <div>View: {state.currentView}</div>
-      <div>Profiles: {state.profiles.length}</div>
-      <div>Current: {state.currentProfile?.name || 'None'}</div>
-      <div>Tauri: {typeof window.__TAURI_INVOKE__}</div>
-    </div>
-  )
+  // Debug overlay removed for production - no longer needed
 
   if (state.isLoading) {
     console.log('🔍 Frontend: Showing LoadingScreen')
-    return (
-      <>
-        <DebugOverlay />
-        <LoadingScreen />
-      </>
-    )
+    return <LoadingScreen />
   }
 
   if (state.error) {
@@ -211,17 +178,9 @@ function AppContent() {
   
   return (
     <div className={styles.app}>
-      <DebugOverlay />
       <ThemeManager />
-      {/* Show offline status and verification in development */}
-      {process.env.NODE_ENV === 'development' && (
-        <>
-          <OfflineStatus compact={true} />
-          <OfflineVerificationPanel compact={true} autoRun={true} />
-        </>
-      )}
       {/* Show offline status when there are issues */}
-      {state.error && process.env.NODE_ENV !== 'development' && (
+      {state.error && (
         <OfflineStatus compact={true} />
       )}
       <AppShell />

@@ -35,6 +35,38 @@
   overflow-y: auto;
 }
 
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background-color: transparent;
+  border: none;
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  line-height: 1;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-md);
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background-color: var(--color-error-light);
+  color: var(--color-error);
+  transform: scale(1.1);
+}
+
+.closeButton:active {
+  transform: scale(0.95);
+}
+
+.closeButton:focus {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
 /* Header */
 .header {
   text-align: center;

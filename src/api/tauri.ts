@@ -22,6 +22,7 @@ import type {
   CreateMixRequest,
   UpdateMixRequest,
   MixConfig,
+  Coordinate,
   // ParentalChallenge,
   // QuizProgress,
 } from '../types/api';
@@ -122,7 +123,7 @@ export class TauriAPIImpl implements TauriAPI {
         ? { name: nameOrRequest, avatar: avatar! }
         : nameOrRequest;
       console.log('🔍 Frontend: Calling create_profile with:', request);
-      const result = await invoke('create_profile', { request });
+      const result = await invoke<Profile>('create_profile', { request });
       console.log('✅ Frontend: create_profile returned:', result);
       return result;
     } catch (error) {
@@ -142,7 +143,7 @@ export class TauriAPIImpl implements TauriAPI {
   async getProfiles(): Promise<Profile[]> {
     try {
       console.log('🔍 Frontend: Calling get_all_profiles...');
-      const result = await invoke('get_all_profiles');
+      const result = await invoke<Profile[]>('get_all_profiles');
       console.log('✅ Frontend: get_all_profiles returned:', result);
       return result;
     } catch (error) {
@@ -592,31 +593,33 @@ export function handleAPIError(error: unknown): Error {
 
 /**
  * Helper function to create Answer objects with proper typing
+ * Note: Answer type is now a simple union, these helpers are kept for backward compatibility
  */
 export const AnswerHelpers = {
-  text: (value: string): Answer => ({ Text: value }),
-  multiple: (values: string[]): Answer => ({ Multiple: values }),
-  coordinates: (coords: Array<{ x: number; y: number; width?: number; height?: number; label?: string }>): Answer => ({ 
-    Coordinates: coords 
-  }),
-  mapping: (mapping: Record<string, string>): Answer => ({ Mapping: mapping }),
+  text: (value: string): string => value,
+  multiple: (values: string[]): string[] => values,
+  coordinates: (coords: Coordinate[]): Coordinate[] => coords,
+  mapping: (mapping: Record<string, string>): Record<string, string> => mapping,
 };
 
 /**
  * Helper function to extract text from Answer union type
  */
 export function getAnswerText(answer: Answer): string {
-  if ('Text' in answer) {
-    return answer.Text;
+  if (typeof answer === 'string') {
+    return answer;
   }
-  if ('Multiple' in answer) {
-    return answer.Multiple.join(', ');
+  if (Array.isArray(answer)) {
+    if (answer.length > 0 && typeof answer[0] === 'object') {
+      // Coordinate array
+      return `${answer.length} coordinate(s)`;
+    }
+    // String array
+    return answer.join(', ');
   }
-  if ('Coordinates' in answer) {
-    return `${answer.Coordinates.length} coordinate(s)`;
-  }
-  if ('Mapping' in answer) {
-    return Object.entries(answer.Mapping).map(([k, v]) => `${k}: ${v}`).join(', ');
+  if (typeof answer === 'object') {
+    // Record<string, string>
+    return Object.entries(answer).map(([k, v]) => `${k}: ${v}`).join(', ');
   }
   return 'Unknown answer type';
 }
@@ -624,29 +627,29 @@ export function getAnswerText(answer: Answer): string {
 /**
  * Type guard to check if an answer is a text answer
  */
-export function isTextAnswer(answer: Answer): answer is { Text: string } {
-  return 'Text' in answer;
+export function isTextAnswer(answer: Answer): answer is string {
+  return typeof answer === 'string';
 }
 
 /**
- * Type guard to check if an answer is a multiple choice answer
+ * Type guard to check if an answer is a multiple choice answer (string array)
  */
-export function isMultipleAnswer(answer: Answer): answer is { Multiple: string[] } {
-  return 'Multiple' in answer;
+export function isMultipleAnswer(answer: Answer): answer is string[] {
+  return Array.isArray(answer) && answer.every(item => typeof item === 'string');
 }
 
 /**
  * Type guard to check if an answer is a coordinates answer
  */
-export function isCoordinatesAnswer(answer: Answer): answer is { Coordinates: Array<{ x: number; y: number; width?: number; height?: number; label?: string }> } {
-  return 'Coordinates' in answer;
+export function isCoordinatesAnswer(answer: Answer): answer is Coordinate[] {
+  return Array.isArray(answer) && answer.length > 0 && typeof answer[0] === 'object' && 'x' in answer[0];
 }
 
 /**
  * Type guard to check if an answer is a mapping answer
  */
-export function isMappingAnswer(answer: Answer): answer is { Mapping: Record<string, string> } {
-  return 'Mapping' in answer;
+export function isMappingAnswer(answer: Answer): answer is Record<string, string> {
+  return typeof answer === 'object' && !Array.isArray(answer);
 }
 
 export default tauriAPI;

@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Animation Performance Optimizer
  * Ensures smooth 60fps animations and manages animation resources

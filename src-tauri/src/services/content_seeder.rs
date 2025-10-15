@@ -4688,6 +4688,411 @@ impl ContentSeeder {
                 },
                 Answer::Text("Zeus".to_string()),
             ).with_difficulty(4).with_tags(vec!["mythology".to_string(), "ancient_greece".to_string(), "culture".to_string()]),
+
+            // === EXPANDED KS1 GENERAL KNOWLEDGE ===
+            
+            // More Basic Life Skills
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What season comes after winter?".to_string(),
+                    options: Some(vec!["Summer".to_string(), "Autumn".to_string(), "Spring".to_string(), "Winter".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Spring".to_string()),
+            ).with_difficulty(1).with_tags(vec!["seasons".to_string(), "nature".to_string(), "time".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which of these is a fruit?".to_string(),
+                    options: Some(vec!["Carrot".to_string(), "Apple".to_string(), "Potato".to_string(), "Lettuce".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Apple".to_string()),
+            ).with_difficulty(1).with_tags(vec!["food".to_string(), "healthy_eating".to_string(), "fruits".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What do bees make?".to_string(),
+                    options: Some(vec!["Milk".to_string(), "Honey".to_string(), "Butter".to_string(), "Cheese".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Honey".to_string()),
+            ).with_difficulty(1).with_tags(vec!["animals".to_string(), "nature".to_string(), "insects".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What do we call a baby dog?".to_string(),
+                    options: Some(vec!["Kitten".to_string(), "Puppy".to_string(), "Calf".to_string(), "Chick".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Puppy".to_string()),
+            ).with_difficulty(1).with_tags(vec!["animals".to_string(), "pets".to_string(), "vocabulary".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "How many legs does a spider have?".to_string(),
+                    options: Some(vec!["6".to_string(), "8".to_string(), "10".to_string(), "12".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("8".to_string()),
+            ).with_difficulty(2).with_tags(vec!["animals".to_string(), "insects".to_string(), "counting".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What color is the sun?".to_string(),
+                    options: Some(vec!["Red".to_string(), "Blue".to_string(), "Yellow".to_string(), "Green".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Yellow".to_string()),
+            ).with_difficulty(1).with_tags(vec!["space".to_string(), "colors".to_string(), "nature".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which animal says 'ribbit'?".to_string(),
+                    options: Some(vec!["Duck".to_string(), "Frog".to_string(), "Cat".to_string(), "Dog".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Frog".to_string()),
+            ).with_difficulty(1).with_tags(vec!["animals".to_string(), "sounds".to_string(), "amphibians".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What do we use to cut paper?".to_string(),
+                    options: Some(vec!["Scissors".to_string(), "Spoon".to_string(), "Pencil".to_string(), "Brush".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Scissors".to_string()),
+            ).with_difficulty(1).with_tags(vec!["tools".to_string(), "school".to_string(), "daily_life".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which shape has three sides?".to_string(),
+                    options: Some(vec!["Circle".to_string(), "Square".to_string(), "Triangle".to_string(), "Rectangle".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Triangle".to_string()),
+            ).with_difficulty(1).with_tags(vec!["shapes".to_string(), "geometry".to_string(), "maths".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Where do fish live?".to_string(),
+                    options: Some(vec!["In trees".to_string(), "In water".to_string(), "In caves".to_string(), "In the sky".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("In water".to_string()),
+            ).with_difficulty(1).with_tags(vec!["animals".to_string(), "habitats".to_string(), "nature".to_string()]),
+
+            // === EXPANDED KS2 GENERAL KNOWLEDGE ===
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the largest ocean on Earth?".to_string(),
+                    options: Some(vec!["Atlantic Ocean".to_string(), "Indian Ocean".to_string(), "Pacific Ocean".to_string(), "Arctic Ocean".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Pacific Ocean".to_string()),
+            ).with_difficulty(3).with_tags(vec!["geography".to_string(), "oceans".to_string(), "earth".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "How many continents are there in the world?".to_string(),
+                    options: Some(vec!["5".to_string(), "6".to_string(), "7".to_string(), "8".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("7".to_string()),
+            ).with_difficulty(2).with_tags(vec!["geography".to_string(), "continents".to_string(), "world".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the tallest mountain in the world?".to_string(),
+                    options: Some(vec!["K2".to_string(), "Mount Everest".to_string(), "Kilimanjaro".to_string(), "Mont Blanc".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Mount Everest".to_string()),
+            ).with_difficulty(2).with_tags(vec!["geography".to_string(), "mountains".to_string(), "records".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which planet is known as the 'Red Planet'?".to_string(),
+                    options: Some(vec!["Venus".to_string(), "Mars".to_string(), "Jupiter".to_string(), "Saturn".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Mars".to_string()),
+            ).with_difficulty(2).with_tags(vec!["space".to_string(), "planets".to_string(), "science".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Who wrote 'Romeo and Juliet'?".to_string(),
+                    options: Some(vec!["Charles Dickens".to_string(), "William Shakespeare".to_string(), "Jane Austen".to_string(), "Mark Twain".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("William Shakespeare".to_string()),
+            ).with_difficulty(3).with_tags(vec!["literature".to_string(), "authors".to_string(), "famous_works".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital city of Australia?".to_string(),
+                    options: Some(vec!["Sydney".to_string(), "Melbourne".to_string(), "Canberra".to_string(), "Brisbane".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Canberra".to_string()),
+            ).with_difficulty(4).with_tags(vec!["geography".to_string(), "capitals".to_string(), "australia".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which gas do plants absorb from the air?".to_string(),
+                    options: Some(vec!["Oxygen".to_string(), "Carbon dioxide".to_string(), "Nitrogen".to_string(), "Helium".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Carbon dioxide".to_string()),
+            ).with_difficulty(3).with_tags(vec!["science".to_string(), "plants".to_string(), "photosynthesis".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "How many sides does a hexagon have?".to_string(),
+                    options: Some(vec!["5".to_string(), "6".to_string(), "7".to_string(), "8".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("6".to_string()),
+            ).with_difficulty(2).with_tags(vec!["shapes".to_string(), "geometry".to_string(), "maths".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the freezing point of water in Celsius?".to_string(),
+                    options: Some(vec!["-10°C".to_string(), "0°C".to_string(), "10°C".to_string(), "32°C".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("0°C".to_string()),
+            ).with_difficulty(2).with_tags(vec!["science".to_string(), "temperature".to_string(), "water".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which famous ship sank in 1912?".to_string(),
+                    options: Some(vec!["Queen Mary".to_string(), "Titanic".to_string(), "Lusitania".to_string(), "Britannic".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Titanic".to_string()),
+            ).with_difficulty(2).with_tags(vec!["history".to_string(), "ships".to_string(), "disasters".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the largest mammal in the world?".to_string(),
+                    options: Some(vec!["African Elephant".to_string(), "Blue Whale".to_string(), "Giraffe".to_string(), "Great White Shark".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Blue Whale".to_string()),
+            ).with_difficulty(2).with_tags(vec!["animals".to_string(), "mammals".to_string(), "records".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "In which country is the Taj Mahal located?".to_string(),
+                    options: Some(vec!["Pakistan".to_string(), "India".to_string(), "Bangladesh".to_string(), "Nepal".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("India".to_string()),
+            ).with_difficulty(3).with_tags(vec!["geography".to_string(), "landmarks".to_string(), "asia".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the smallest continent?".to_string(),
+                    options: Some(vec!["Europe".to_string(), "Antarctica".to_string(), "Australia".to_string(), "South America".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Australia".to_string()),
+            ).with_difficulty(3).with_tags(vec!["geography".to_string(), "continents".to_string(), "size".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "How many bones are in the human body?".to_string(),
+                    options: Some(vec!["186".to_string(), "206".to_string(), "226".to_string(), "246".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("206".to_string()),
+            ).with_difficulty(4).with_tags(vec!["science".to_string(), "human_body".to_string(), "anatomy".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the main language spoken in Brazil?".to_string(),
+                    options: Some(vec!["Spanish".to_string(), "Portuguese".to_string(), "French".to_string(), "English".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Portuguese".to_string()),
+            ).with_difficulty(3).with_tags(vec!["geography".to_string(), "languages".to_string(), "south_america".to_string()]),
         ];
 
         for question in questions {
@@ -5648,6 +6053,437 @@ impl ContentSeeder {
                 },
                 Answer::Text("South America".to_string()),
             ).with_difficulty(2).with_tags(vec!["geography".to_string(), "continents".to_string(), "south_america".to_string()]),
+
+            // === MORE FLAGS & CAPITALS FOR KS2 ===
+
+            // Italy Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Ireland".to_string(), "Italy".to_string(), "Hungary".to_string(), "Bulgaria".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/it.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Italy".to_string()),
+            ).with_difficulty(2).with_tags(vec!["flags".to_string(), "europe".to_string()]),
+
+            // Russia Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Slovakia".to_string(), "Slovenia".to_string(), "Russia".to_string(), "Croatia".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/ru.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Russia".to_string()),
+            ).with_difficulty(2).with_tags(vec!["flags".to_string(), "europe".to_string(), "asia".to_string()]),
+
+            // China Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Vietnam".to_string(), "China".to_string(), "North Korea".to_string(), "Mongolia".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/cn.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("China".to_string()),
+            ).with_difficulty(2).with_tags(vec!["flags".to_string(), "asia".to_string()]),
+
+            // India Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Ireland".to_string(), "India".to_string(), "Italy".to_string(), "Hungary".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/in.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("India".to_string()),
+            ).with_difficulty(3).with_tags(vec!["flags".to_string(), "asia".to_string()]),
+
+            // Turkey Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Turkey".to_string(), "Tunisia".to_string(), "Pakistan".to_string(), "Algeria".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/tr.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Turkey".to_string()),
+            ).with_difficulty(3).with_tags(vec!["flags".to_string(), "asia".to_string(), "europe".to_string()]),
+
+            // Sweden Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Finland".to_string(), "Denmark".to_string(), "Sweden".to_string(), "Norway".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/se.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Sweden".to_string()),
+            ).with_difficulty(3).with_tags(vec!["flags".to_string(), "europe".to_string(), "scandinavia".to_string()]),
+
+            // Norway Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Iceland".to_string(), "Finland".to_string(), "Norway".to_string(), "Denmark".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/no.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Norway".to_string()),
+            ).with_difficulty(3).with_tags(vec!["flags".to_string(), "europe".to_string(), "scandinavia".to_string()]),
+
+            // Greece Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Uruguay".to_string(), "Greece".to_string(), "Israel".to_string(), "Argentina".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/gr.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Greece".to_string()),
+            ).with_difficulty(3).with_tags(vec!["flags".to_string(), "europe".to_string()]),
+
+            // Egypt Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Syria".to_string(), "Iraq".to_string(), "Egypt".to_string(), "Yemen".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/eg.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Egypt".to_string()),
+            ).with_difficulty(3).with_tags(vec!["flags".to_string(), "africa".to_string()]),
+
+            // South Africa Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Zimbabwe".to_string(), "South Africa".to_string(), "Kenya".to_string(), "Namibia".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/za.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("South Africa".to_string()),
+            ).with_difficulty(3).with_tags(vec!["flags".to_string(), "africa".to_string()]),
+
+            // New Zealand Flag
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which country does this flag belong to?".to_string(),
+                    options: Some(vec!["Australia".to_string(), "New Zealand".to_string(), "Fiji".to_string(), "Cook Islands".to_string()]),
+                    story: None,
+                    image_url: Some("https://flagpedia.net/data/flags/w580/nz.png".to_string()),
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("New Zealand".to_string()),
+            ).with_difficulty(3).with_tags(vec!["flags".to_string(), "oceania".to_string()]),
+
+            // === MORE CAPITAL CITIES FOR KS2 ===
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of France?".to_string(),
+                    options: Some(vec!["Lyon".to_string(), "Marseille".to_string(), "Paris".to_string(), "Nice".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Paris".to_string()),
+            ).with_difficulty(1).with_tags(vec!["capitals".to_string(), "europe".to_string(), "france".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Spain?".to_string(),
+                    options: Some(vec!["Barcelona".to_string(), "Madrid".to_string(), "Valencia".to_string(), "Seville".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Madrid".to_string()),
+            ).with_difficulty(2).with_tags(vec!["capitals".to_string(), "europe".to_string(), "spain".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Italy?".to_string(),
+                    options: Some(vec!["Milan".to_string(), "Venice".to_string(), "Rome".to_string(), "Naples".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Rome".to_string()),
+            ).with_difficulty(2).with_tags(vec!["capitals".to_string(), "europe".to_string(), "italy".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Germany?".to_string(),
+                    options: Some(vec!["Munich".to_string(), "Hamburg".to_string(), "Berlin".to_string(), "Frankfurt".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Berlin".to_string()),
+            ).with_difficulty(2).with_tags(vec!["capitals".to_string(), "europe".to_string(), "germany".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of China?".to_string(),
+                    options: Some(vec!["Shanghai".to_string(), "Beijing".to_string(), "Hong Kong".to_string(), "Guangzhou".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Beijing".to_string()),
+            ).with_difficulty(3).with_tags(vec!["capitals".to_string(), "asia".to_string(), "china".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Japan?".to_string(),
+                    options: Some(vec!["Osaka".to_string(), "Kyoto".to_string(), "Tokyo".to_string(), "Yokohama".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Tokyo".to_string()),
+            ).with_difficulty(2).with_tags(vec!["capitals".to_string(), "asia".to_string(), "japan".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Canada?".to_string(),
+                    options: Some(vec!["Toronto".to_string(), "Montreal".to_string(), "Ottawa".to_string(), "Vancouver".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Ottawa".to_string()),
+            ).with_difficulty(4).with_tags(vec!["capitals".to_string(), "north_america".to_string(), "canada".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Brazil?".to_string(),
+                    options: Some(vec!["São Paulo".to_string(), "Rio de Janeiro".to_string(), "Brasília".to_string(), "Salvador".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Brasília".to_string()),
+            ).with_difficulty(4).with_tags(vec!["capitals".to_string(), "south_america".to_string(), "brazil".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of India?".to_string(),
+                    options: Some(vec!["Mumbai".to_string(), "Kolkata".to_string(), "New Delhi".to_string(), "Bangalore".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("New Delhi".to_string()),
+            ).with_difficulty(3).with_tags(vec!["capitals".to_string(), "asia".to_string(), "india".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Egypt?".to_string(),
+                    options: Some(vec!["Alexandria".to_string(), "Cairo".to_string(), "Giza".to_string(), "Luxor".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Cairo".to_string()),
+            ).with_difficulty(3).with_tags(vec!["capitals".to_string(), "africa".to_string(), "egypt".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Russia?".to_string(),
+                    options: Some(vec!["St. Petersburg".to_string(), "Moscow".to_string(), "Novosibirsk".to_string(), "Yekaterinburg".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Moscow".to_string()),
+            ).with_difficulty(2).with_tags(vec!["capitals".to_string(), "europe".to_string(), "russia".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Greece?".to_string(),
+                    options: Some(vec!["Thessaloniki".to_string(), "Athens".to_string(), "Patras".to_string(), "Heraklion".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Athens".to_string()),
+            ).with_difficulty(3).with_tags(vec!["capitals".to_string(), "europe".to_string(), "greece".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Turkey?".to_string(),
+                    options: Some(vec!["Istanbul".to_string(), "Ankara".to_string(), "Izmir".to_string(), "Bursa".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Ankara".to_string()),
+            ).with_difficulty(4).with_tags(vec!["capitals".to_string(), "asia".to_string(), "europe".to_string(), "turkey".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of Argentina?".to_string(),
+                    options: Some(vec!["Córdoba".to_string(), "Buenos Aires".to_string(), "Rosario".to_string(), "Mendoza".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Buenos Aires".to_string()),
+            ).with_difficulty(4).with_tags(vec!["capitals".to_string(), "south_america".to_string(), "argentina".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is the capital of South Africa?".to_string(),
+                    options: Some(vec!["Johannesburg".to_string(), "Cape Town".to_string(), "Pretoria".to_string(), "Durban".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Pretoria".to_string()),
+            ).with_difficulty(5).with_tags(vec!["capitals".to_string(), "africa".to_string(), "south_africa".to_string()]),
         ];
 
         for question in questions {
@@ -5662,27 +6498,27 @@ impl ContentSeeder {
         println!("Seeding interactive Mathematics content...");
 
         let questions = vec![
-            // Drag and Drop - Sorting numbers
+            // Number ordering - Multiple Choice
             Question::new(
                 subject_id,
                 KeyStage::KS1,
-                QuestionType::DragDrop,
+                QuestionType::MultipleChoice,
                 QuestionContent {
-                    text: "Drag the numbers to put them in order from smallest to largest.".to_string(),
-                    options: Some(vec!["3".to_string(), "1".to_string(), "5".to_string(), "2".to_string(), "4".to_string()]),
+                    text: "Which numbers are in order from smallest to largest?".to_string(),
+                    options: Some(vec![
+                        "5, 4, 3, 2, 1".to_string(), 
+                        "1, 2, 3, 4, 5".to_string(), 
+                        "3, 1, 5, 2, 4".to_string(), 
+                        "2, 4, 1, 5, 3".to_string()
+                    ]),
                     story: None,
                     image_url: None,
                     hotspots: None,
                     blanks: None,
-                    additional_data: {
-                        let mut map = HashMap::new();
-                        map.insert("correct_order".to_string(), serde_json::json!(["1", "2", "3", "4", "5"]));
-                        map.insert("drag_type".to_string(), serde_json::json!("number_ordering"));
-                        Some(map)
-                    },
+                    additional_data: None,
                 },
-                Answer::Text("1,2,3,4,5".to_string()),
-            ).with_difficulty(2).with_tags(vec!["ordering".to_string(), "numbers".to_string(), "drag_drop".to_string()]),
+                Answer::Text("1, 2, 3, 4, 5".to_string()),
+            ).with_difficulty(2).with_tags(vec!["ordering".to_string(), "numbers".to_string()]),
 
             // Hotspot - Identifying shapes
             Question::new(
@@ -5731,27 +6567,38 @@ impl ContentSeeder {
                 Answer::Text("6".to_string()),
             ).with_difficulty(3).with_tags(vec!["multiplication".to_string(), "fill_blank".to_string(), "times_tables".to_string()]),
 
-            // More KS2 interactive questions
+            // Fractions to decimals - Multiple Choice
             Question::new(
                 subject_id,
                 KeyStage::KS2,
-                QuestionType::DragDrop,
+                QuestionType::MultipleChoice,
                 QuestionContent {
-                    text: "Match the fractions to their decimal equivalents.".to_string(),
-                    options: Some(vec!["1/2".to_string(), "1/4".to_string(), "3/4".to_string(), "0.5".to_string(), "0.25".to_string(), "0.75".to_string()]),
+                    text: "What is 1/2 as a decimal?".to_string(),
+                    options: Some(vec!["0.25".to_string(), "0.5".to_string(), "0.75".to_string(), "1.0".to_string()]),
                     story: None,
                     image_url: None,
                     hotspots: None,
                     blanks: None,
-                    additional_data: {
-                        let mut map = HashMap::new();
-                        map.insert("pairs".to_string(), serde_json::json!([["1/2", "0.5"], ["1/4", "0.25"], ["3/4", "0.75"]]));
-                        map.insert("drag_type".to_string(), serde_json::json!("matching"));
-                        Some(map)
-                    },
+                    additional_data: None,
                 },
-                Answer::Text("1/2:0.5,1/4:0.25,3/4:0.75".to_string()),
-            ).with_difficulty(4).with_tags(vec!["fractions".to_string(), "decimals".to_string(), "matching".to_string()]),
+                Answer::Text("0.5".to_string()),
+            ).with_difficulty(3).with_tags(vec!["fractions".to_string(), "decimals".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "What is 3/4 as a decimal?".to_string(),
+                    options: Some(vec!["0.25".to_string(), "0.5".to_string(), "0.75".to_string(), "1.5".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("0.75".to_string()),
+            ).with_difficulty(4).with_tags(vec!["fractions".to_string(), "decimals".to_string()]),
         ];
 
         for question in questions {
@@ -5787,27 +6634,27 @@ impl ContentSeeder {
                 ]),
             ).with_difficulty(3).with_tags(vec!["maps".to_string(), "countries".to_string(), "hotspot".to_string()]),
 
-            // Drag and Drop - Matching flags to countries
+            // Flag recognition - Multiple Choice (more engaging than matching)
             Question::new(
                 subject_id,
                 KeyStage::KS2,
-                QuestionType::DragDrop,
+                QuestionType::MultipleChoice,
                 QuestionContent {
-                    text: "Match each flag to its country.".to_string(),
-                    options: Some(vec!["🇬🇧".to_string(), "🇫🇷".to_string(), "🇩🇪".to_string(), "United Kingdom".to_string(), "France".to_string(), "Germany".to_string()]),
+                    text: "Which ocean separates Europe from North America?".to_string(),
+                    options: Some(vec![
+                        "Pacific Ocean".to_string(), 
+                        "Atlantic Ocean".to_string(), 
+                        "Indian Ocean".to_string(), 
+                        "Arctic Ocean".to_string()
+                    ]),
                     story: None,
                     image_url: None,
                     hotspots: None,
                     blanks: None,
-                    additional_data: {
-                        let mut map = HashMap::new();
-                        map.insert("pairs".to_string(), serde_json::json!([["🇬🇧", "United Kingdom"], ["🇫🇷", "France"], ["🇩🇪", "Germany"]]));
-                        map.insert("drag_type".to_string(), serde_json::json!("matching"));
-                        Some(map)
-                    },
+                    additional_data: None,
                 },
-                Answer::Text("🇬🇧:United Kingdom,🇫🇷:France,🇩🇪:Germany".to_string()),
-            ).with_difficulty(3).with_tags(vec!["flags".to_string(), "countries".to_string(), "matching".to_string()]),
+                Answer::Text("Atlantic Ocean".to_string()),
+            ).with_difficulty(3).with_tags(vec!["oceans".to_string(), "geography".to_string()]),
 
             // Fill in the blank - Capital cities
             Question::new(
@@ -5844,27 +6691,38 @@ impl ContentSeeder {
         println!("Seeding interactive English content...");
 
         let questions = vec![
-            // Drag and Drop - Alphabetical order
+            // Alphabetical order - Multiple Choice
             Question::new(
                 subject_id,
                 KeyStage::KS1,
-                QuestionType::DragDrop,
+                QuestionType::MultipleChoice,
                 QuestionContent {
-                    text: "Put these words in alphabetical order.".to_string(),
+                    text: "Which word comes FIRST in alphabetical order?".to_string(),
                     options: Some(vec!["dog".to_string(), "apple".to_string(), "cat".to_string(), "ball".to_string()]),
                     story: None,
                     image_url: None,
                     hotspots: None,
                     blanks: None,
-                    additional_data: {
-                        let mut map = HashMap::new();
-                        map.insert("correct_order".to_string(), serde_json::json!(["apple", "ball", "cat", "dog"]));
-                        map.insert("drag_type".to_string(), serde_json::json!("alphabetical_ordering"));
-                        Some(map)
-                    },
+                    additional_data: None,
                 },
-                Answer::Text("apple,ball,cat,dog".to_string()),
-            ).with_difficulty(3).with_tags(vec!["alphabetical_order".to_string(), "vocabulary".to_string(), "drag_drop".to_string()]),
+                Answer::Text("apple".to_string()),
+            ).with_difficulty(2).with_tags(vec!["alphabetical_order".to_string(), "vocabulary".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS1,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which word comes LAST in alphabetical order?".to_string(),
+                    options: Some(vec!["dog".to_string(), "apple".to_string(), "cat".to_string(), "ball".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("dog".to_string()),
+            ).with_difficulty(2).with_tags(vec!["alphabetical_order".to_string(), "vocabulary".to_string()]),
 
             // Story Quiz with longer comprehension
             Question::new(
@@ -6076,30 +6934,38 @@ impl ContentSeeder {
                 ]),
             ).with_difficulty(2).with_tags(vec!["human_body".to_string(), "organs".to_string(), "hotspot".to_string()]),
 
-            // Drag and Drop - Animal classification
+            // Animal classification - Multiple Choice
             Question::new(
                 subject_id,
                 KeyStage::KS2,
-                QuestionType::DragDrop,
+                QuestionType::MultipleChoice,
                 QuestionContent {
-                    text: "Sort these animals into mammals and birds.".to_string(),
-                    options: Some(vec!["Dog".to_string(), "Eagle".to_string(), "Cat".to_string(), "Robin".to_string(), "Mammals".to_string(), "Birds".to_string()]),
+                    text: "Which of these animals is a mammal?".to_string(),
+                    options: Some(vec!["Eagle".to_string(), "Robin".to_string(), "Dog".to_string(), "Penguin".to_string()]),
                     story: None,
                     image_url: None,
                     hotspots: None,
                     blanks: None,
-                    additional_data: {
-                        let mut map = HashMap::new();
-                        map.insert("categories".to_string(), serde_json::json!({
-                            "Mammals": ["Dog", "Cat"],
-                            "Birds": ["Eagle", "Robin"]
-                        }));
-                        map.insert("drag_type".to_string(), serde_json::json!("categorization"));
-                        Some(map)
-                    },
+                    additional_data: None,
                 },
-                Answer::Text("Mammals:Dog,Cat|Birds:Eagle,Robin".to_string()),
-            ).with_difficulty(3).with_tags(vec!["animals".to_string(), "classification".to_string(), "drag_drop".to_string()]),
+                Answer::Text("Dog".to_string()),
+            ).with_difficulty(2).with_tags(vec!["animals".to_string(), "classification".to_string()]),
+
+            Question::new(
+                subject_id,
+                KeyStage::KS2,
+                QuestionType::MultipleChoice,
+                QuestionContent {
+                    text: "Which of these animals is a bird?".to_string(),
+                    options: Some(vec!["Cat".to_string(), "Dog".to_string(), "Robin".to_string(), "Dolphin".to_string()]),
+                    story: None,
+                    image_url: None,
+                    hotspots: None,
+                    blanks: None,
+                    additional_data: None,
+                },
+                Answer::Text("Robin".to_string()),
+            ).with_difficulty(2).with_tags(vec!["animals".to_string(), "classification".to_string()]),
 
             // Fill in the blank - Plant parts
             Question::new(
@@ -6196,6 +7062,31 @@ impl ContentSeeder {
                 
                 // Reseed with updated content
                 self.seed_flags_capitals_content(flags_capitals_id)?;
+            }
+        }
+
+        // Check if English content has drag-drop questions (from old version) and remove them
+        if let Some(&english_id) = subject_map.get("english") {
+            let has_drag_drop = self.db_manager.execute(|conn| {
+                let mut stmt = conn.prepare(
+                    "SELECT COUNT(*) FROM questions WHERE subject_id = ?1 AND question_type = 'drag_drop'"
+                )?;
+                let count: u32 = stmt.query_row([english_id], |row| row.get(0))?;
+                Ok(count > 0)
+            })?;
+            
+            if has_drag_drop {
+                println!("⚠️  Detected old drag-drop questions in English content. Removing and reseeding...");
+                
+                // Delete all English questions (both new and old format)
+                self.db_manager.execute(|conn| {
+                    conn.execute("DELETE FROM questions WHERE subject_id = ?1", [english_id])?;
+                    Ok(())
+                })?;
+                
+                // Reseed English content with updated questions (no drag-drop)
+                self.seed_english_content(english_id)?;
+                self.seed_interactive_english_content(english_id)?;
             }
         }
 

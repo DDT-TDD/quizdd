@@ -4,7 +4,11 @@ import { fixedTauriAPI as tauriAPI } from '../api/tauri-fixed'
 import { ParentalChallenge } from '../types/api'
 import styles from './ParentalGate.module.css'
 
-export function ParentalGate() {
+interface ParentalGateProps {
+  onClose?: () => void // Optional custom close handler
+}
+
+export function ParentalGate({ onClose }: ParentalGateProps = {}) {
   const { dispatch } = useAppContext()
   const [challenge, setChallenge] = useState<ParentalChallenge | null>(null)
   const [userAnswer, setUserAnswer] = useState('')
@@ -107,7 +111,17 @@ export function ParentalGate() {
   }
 
   const handleCancel = () => {
-    dispatch(appActions.toggleParentalGate(false))
+    console.log('🚪 ParentalGate: Cancel clicked, closing gate...')
+    if (onClose) {
+      // Use custom close handler if provided (e.g., from SettingsPanel)
+      console.log('✅ ParentalGate: Using custom onClose handler')
+      onClose()
+    } else {
+      // Use global gate close (for AppShell level gate)
+      console.log('✅ ParentalGate: Closing global gate via AppContext')
+      dispatch(appActions.toggleParentalGate(false))
+    }
+    console.log('✅ ParentalGate: Close handler executed')
   }
 
   const handleNewProblem = () => {
@@ -132,13 +146,22 @@ export function ParentalGate() {
       <div className={styles.overlay} onClick={handleCancel} />
       
       <div className={styles.container}>
+        <button 
+          className={styles.closeButton}
+          onClick={handleCancel}
+          aria-label="Close parental gate"
+          type="button"
+        >
+          ✕
+        </button>
+        
         <div className={styles.header}>
           <h2 className={styles.title}>
             <span className={styles.lockIcon} role="img" aria-label="Lock">🔒</span>
             Parental Verification
           </h2>
           <p className={styles.subtitle}>
-            This area requires adult supervision. Please solve the math problem below:
+            Adult supervision required. Solve the math problem to access protected settings:
           </p>
         </div>
 

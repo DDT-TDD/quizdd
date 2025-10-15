@@ -6,7 +6,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "Educational Quiz App",
+    "productName": "QuizDD",
     "version": "1.0.0"
   },
   "tauri": {
@@ -52,7 +52,7 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "Educational Quiz App",
+        "title": "QuizDD",
         "width": 1200,
         "height": 800,
         "minWidth": 800,
