@@ -1,0 +1,413 @@
+.updateManager {
+  padding: 1.5rem;
+  background: var(--surface-color, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color, #e0e0e0);
+}
+
+.header h2 {
+  margin: 0;
+  color: var(--primary-color, #2196f3);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.versionInfo {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+}
+
+.version {
+  font-weight: 600;
+  color: var(--primary-color, #2196f3);
+  background: var(--primary-light, #e3f2fd);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+.errorBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--error-light, #ffebee);
+  color: var(--error-color, #d32f2f);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--error-color, #d32f2f);
+}
+
+.errorMessage {
+  flex: 1;
+  font-weight: 500;
+}
+
+.dismissButton {
+  background: none;
+  border: none;
+  color: var(--error-color, #d32f2f);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.dismissButton:hover {
+  background: rgba(211, 47, 47, 0.1);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkButton,
+.rollbackButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+
+.checkButton {
+  background: var(--primary-color, #2196f3);
+  color: white;
+}
+
+.checkButton:hover:not(:disabled) {
+  background: var(--primary-dark, #1976d2);
+  transform: translateY(-1px);
+}
+
+.checkButton:disabled {
+  background: var(--disabled-color, #ccc);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.rollbackButton {
+  background: var(--warning-color, #ff9800);
+  color: white;
+}
+
+.rollbackButton:hover:not(:disabled) {
+  background: var(--warning-dark, #f57c00);
+  transform: translateY(-1px);
+}
+
+.progressContainer {
+  background: var(--surface-light, #f5f5f5);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.progressLabel {
+  font-weight: 600;
+  color: var(--text-primary, #333);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: var(--border-color, #e0e0e0);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--success-color, #4caf50), var(--primary-color, #2196f3));
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary-color, #2196f3);
+}
+
+.updatesContainer {
+  margin-top: 1.5rem;
+}
+
+.updatesContainer h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary, #333);
+  font-size: 1.2rem;
+}
+
+.updateItem {
+  background: var(--surface-light, #f9f9f9);
+  border: 2px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.updateItem:hover {
+  border-color: var(--primary-color, #2196f3);
+}
+
+.updateHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.updateVersion {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary-color, #2196f3);
+}
+
+.requiredBadge {
+  background: var(--error-color, #d32f2f);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.updateDescription {
+  color: var(--text-secondary, #666);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.updateMeta {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+  margin-bottom: 1rem;
+}
+
+.installButton {
+  background: var(--success-color, #4caf50);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.installButton:hover {
+  background: var(--success-dark, #388e3c);
+  transform: translateY(-1px);
+}
+
+.installButton.requiredUpdate {
+  background: var(--error-color, #d32f2f);
+  animation: pulse 2s infinite;
+}
+
+.installButton.requiredUpdate:hover {
+  background: var(--error-dark, #c62828);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+}
+
+.noUpdates {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary, #666);
+}
+
+.noUpdates p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.parentalGateOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.parentalGateModal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.parentalGateModal h3 {
+  margin: 0 0 1rem 0;
+  color: var(--primary-color, #2196f3);
+}
+
+.parentalGateModal p {
+  margin: 0 0 1.5rem 0;
+  color: var(--text-secondary, #666);
+}
+
+.challengeQuestion {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary, #333);
+  background: var(--surface-light, #f5f5f5);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.challengeInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s ease;
+}
+
+.challengeInput:focus {
+  outline: none;
+  border-color: var(--primary-color, #2196f3);
+}
+
+.parentalGateActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.verifyButton,
+.cancelButton {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.verifyButton {
+  background: var(--success-color, #4caf50);
+  color: white;
+}
+
+.verifyButton:hover {
+  background: var(--success-dark, #388e3c);
+}
+
+.cancelButton {
+  background: var(--border-color, #e0e0e0);
+  color: var(--text-primary, #333);
+}
+
+.cancelButton:hover {
+  background: var(--disabled-color, #ccc);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .updateManager {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .checkButton,
+  .rollbackButton {
+    width: 100%;
+  }
+
+  .parentalGateModal {
+    padding: 1.5rem;
+  }
+
+  .parentalGateActions {
+    flex-direction: column;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .updateManager {
+    border: 2px solid var(--text-primary, #000);
+  }
+
+  .updateItem {
+    border-width: 3px;
+  }
+
+  .progressBar {
+    border: 1px solid var(--text-primary, #000);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .checkButton,
+  .rollbackButton,
+  .installButton {
+    transition: none;
+  }
+
+  .checkButton:hover:not(:disabled),
+  .rollbackButton:hover:not(:disabled),
+  .installButton:hover {
+    transform: none;
+  }
+
+  .progressFill {
+    transition: none;
+  }
+
+  .installButton.requiredUpdate {
+    animation: none;
+  }
+}

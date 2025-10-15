@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .debug-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .status {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .success { background: rgba(0, 255, 0, 0.2); }
+        .error { background: rgba(255, 0, 0, 0.2); }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        #log {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-container">
+        <h1>🔍 QuiZDD Debug Test</h1>
+        
+        <div class="status success">
+            <h2>✅ Frontend HTML Loaded Successfully</h2>
+            <p>This page proves the frontend can load basic HTML/CSS/JS</p>
+        </div>
+
+        <div class="status" id="tauri-status">
+            <h2>🔄 Testing Tauri Connection...</h2>
+            <p>Checking if we can connect to the Rust backend...</p>
+        </div>
+
+        <button onclick="testTauriConnection()">Test Tauri API</button>
+        <button onclick="testProfiles()">Test Profile Loading</button>
+        <button onclick="testMainApp()">Test Main App Components</button>
+        <button onclick="switchToMainApp()">Switch to Main App</button>
+        <button onclick="clearLog()">Clear Log</button>
+
+        <div id="log"></div>
+    </div>
+
+    <script>
+        function log(message) {
+            const logElement = document.getElementById('log');
+            const timestamp = new Date().toLocaleTimeString();
+            logElement.textContent += `[${timestamp}] ${message}\n`;
+            logElement.scrollTop = logElement.scrollHeight;
+            console.log(message);
+        }
+
+        function clearLog() {
+            document.getElementById('log').textContent = '';
+        }
+
+        async function testTauriConnection() {
+            log('🔍 Testing Tauri connection...');
+            
+            try {
+                // Check if Tauri is available
+                if (typeof window.__TAURI__ === 'undefined') {
+                    throw new Error('Tauri API not available - window.__TAURI__ is undefined');
+                }
+                
+                log('✅ Tauri API object found');
+                log(`🔍 Tauri object keys: ${Object.keys(window.__TAURI__).join(', ')}`);
+                
+                // Try to use our existing API wrapper
+                try {
+                    log('🔍 Trying to import existing API wrapper...');
+                    const { tauriAPI } = await import('/src/api/tauri.ts');
+                    log('✅ API wrapper imported successfully');
+                    
+                    log('🔍 Testing database version call...');
+                    const version = await tauriAPI.getDatabaseVersion();
+                    log(`✅ Database version: ${version}`);
+                    
+                    document.getElementById('tauri-status').innerHTML = `
+                        <h2>✅ Tauri Connection Successful</h2>
+                        <p>Successfully connected to Rust backend using API wrapper!</p>
+                        <p>Database version: ${version}</p>
+                    `;
+                    document.getElementById('tauri-status').className = 'status success';
+                    return;
+                    
+                } catch (wrapperError) {
+                    log(`❌ API wrapper failed: ${wrapperError.message}`);
+                    log(`❌ Wrapper error stack: ${wrapperError.stack}`);
+                }
+
+                // Try the fixed API wrapper
+                try {
+                    log('🔍 Trying to import FIXED API wrapper...');
+                    const { fixedTauriAPI } = await import('/src/api/tauri-fixed.ts');
+                    log('✅ Fixed API wrapper imported successfully');
+                    
+                    log('🔍 Testing database version call with fixed API...');
+                    const version = await fixedTauriAPI.getDatabaseVersion();
+                    log(`✅ Database version via fixed API: ${version}`);
+                    
+                    log('🔍 Testing profile loading with fixed API...');
+                    const profiles = await fixedTauriAPI.getAllProfiles();
+                    log(`✅ Profiles loaded via fixed API: ${JSON.stringify(profiles, null, 2)}`);
+                    
+                    document.getElementById('tauri-status').innerHTML = `
+                        <h2>✅ Tauri Connection Successful</h2>
+                        <p>Successfully connected using FIXED API wrapper!</p>
+                        <p>Database version: ${version}</p>
+                        <p>Profiles found: ${profiles.length}</p>
+                    `;
+                    document.getElementById('tauri-status').className = 'status success';
+                    return;
+                    
+                } catch (fixedWrapperError) {
+                    log(`❌ Fixed API wrapper failed: ${fixedWrapperError.message}`);
+                    log(`❌ Fixed wrapper error stack: ${fixedWrapperError.stack}`);
+                }
+                
+                // Fallback: Try direct window.__TAURI_INVOKE__ if it exists
+                if (window.__TAURI_INVOKE__) {
+                    log('🔍 Found __TAURI_INVOKE__, trying direct call...');
+                    const version = await window.__TAURI_INVOKE__('get_database_version');
+                    log(`✅ Database version via __TAURI_INVOKE__: ${version}`);
+                    
+                    // Test profile loading too
+                    log('🔍 Testing profile loading via __TAURI_INVOKE__...');
+                    const profiles = await window.__TAURI_INVOKE__('get_all_profiles');
+                    log(`✅ Profiles loaded via __TAURI_INVOKE__: ${JSON.stringify(profiles, null, 2)}`);
+                    
+                    document.getElementById('tauri-status').innerHTML = `
+                        <h2>✅ Tauri Connection Successful</h2>
+                        <p>Successfully connected via __TAURI_INVOKE__!</p>
+                        <p>Database version: ${version}</p>
+                        <p>Profiles found: ${profiles.length}</p>
+                    `;
+                    document.getElementById('tauri-status').className = 'status success';
+                    return;
+                }
+                
+                // Check all available window properties for Tauri
+                log('🔍 Checking all window properties for Tauri...');
+                const tauriProps = Object.keys(window).filter(key => key.includes('TAURI') || key.includes('tauri'));
+                log(`🔍 Tauri-related window properties: ${tauriProps.join(', ')}`);
+                
+                throw new Error('No working Tauri invoke method found');
+                
+            } catch (error) {
+                log(`❌ Tauri connection failed: ${error.message}`);
+                log(`❌ Error stack: ${error.stack}`);
+                document.getElementById('tauri-status').innerHTML = `
+                    <h2>❌ Tauri Connection Failed</h2>
+                    <p>Error: ${error.message}</p>
+                `;
+                document.getElementById('tauri-status').className = 'status error';
+            }
+        }
+
+        async function testProfiles() {
+            log('🔍 Testing profile loading...');
+            
+            try {
+                // Use the same invoke resolution logic
+                let invoke;
+                try {
+                    const core = await import('@tauri-apps/api/core');
+                    invoke = core.invoke;
+                } catch (e1) {
+                    try {
+                        const tauri = await import('@tauri-apps/api/tauri');
+                        invoke = tauri.invoke;
+                    } catch (e2) {
+                        invoke = window.__TAURI__.invoke;
+                    }
+                }
+                
+                log('✅ Tauri invoke obtained for profiles');
+                
+                const profiles = await invoke('get_all_profiles');
+                log(`✅ Profiles loaded: ${JSON.stringify(profiles, null, 2)}`);
+                
+            } catch (error) {
+                log(`❌ Profile loading failed: ${error.message}`);
+                log(`❌ Error stack: ${error.stack}`);
+            }
+        }
+
+        async function testMainApp() {
+            log('🔍 Testing main app components with fixed API...');
+            
+            try {
+                const { fixedTauriAPI } = await import('/src/api/tauri-fixed.ts');
+                
+                // Test content loading
+                log('🔍 Testing content statistics...');
+                const stats = await fixedTauriAPI.getContentStatistics();
+                log(`✅ Content statistics: ${JSON.stringify(stats, null, 2)}`);
+                
+                // Test subjects loading
+                log('🔍 Testing subjects loading...');
+                const subjects = await fixedTauriAPI.getSubjects();
+                log(`✅ Subjects loaded: ${JSON.stringify(subjects, null, 2)}`);
+                
+                // Test settings
+                log('🔍 Testing settings loading...');
+                const settings = await fixedTauriAPI.loadSettings();
+                log(`✅ Settings loaded: ${JSON.stringify(settings, null, 2)}`);
+                
+                log('✅ All main app components tested successfully!');
+                
+            } catch (error) {
+                log(`❌ Main app component test failed: ${error.message}`);
+                log(`❌ Error stack: ${error.stack}`);
+            }
+        }
+
+        function switchToMainApp() {
+            log('🔄 Switching to main app...');
+            // Change the URL to load the main app
+            window.location.href = window.location.origin;
+        }
+
+        // Auto-test on load
+        window.addEventListener('load', () => {
+            log('🚀 Debug page loaded, starting auto-tests...');
+            
+            // Log what's available in window
+            log('🔍 Window object inspection:');
+            log(`- window.__TAURI__: ${typeof window.__TAURI__}`);
+            log(`- window.__TAURI_INVOKE__: ${typeof window.__TAURI_INVOKE__}`);
+            log(`- window.isTauri: ${typeof window.isTauri}`);
+            
+            if (window.__TAURI__) {
+                log(`- __TAURI__ keys: ${Object.keys(window.__TAURI__).join(', ')}`);
+                if (window.__TAURI__.invoke) {
+                    log(`- __TAURI__.invoke: ${typeof window.__TAURI__.invoke}`);
+                }
+            }
+            
+            // Check for all Tauri-related properties
+            const allTauriProps = Object.keys(window).filter(key => 
+                key.toLowerCase().includes('tauri') || 
+                key.includes('__TAURI') ||
+                key.includes('invoke')
+            );
+            log(`- All Tauri-related properties: ${allTauriProps.join(', ')}`);
+            
+            // Check if we're in a Tauri context
+            log(`- User agent: ${navigator.userAgent}`);
+            log(`- Is Tauri context: ${window.location.protocol === 'tauri:'}`);
+            log(`- Current URL: ${window.location.href}`);
+            
+            setTimeout(testTauriConnection, 1000);
+        });
+    </script>
+</body>
+</html>
+</content>
+</invoke>

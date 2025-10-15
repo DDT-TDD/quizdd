@@ -1,0 +1,25 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Seed -->
+  <circle cx="50" cy="150" r="8" fill="#8D6E63"/>
+  <text x="50" y="180" text-anchor="middle" font-size="12">Seed</text>
+  
+  <!-- Sprout -->
+  <circle cx="150" cy="150" r="6" fill="#8D6E63"/>
+  <path d="M150,150 Q155,140 160,130" stroke="#4CAF50" stroke-width="3" fill="none"/>
+  <ellipse cx="162" cy="128" rx="4" ry="6" fill="#4CAF50"/>
+  <text x="150" y="180" text-anchor="middle" font-size="12">Sprout</text>
+  
+  <!-- Young Plant -->
+  <rect x="248" y="140" width="4" height="20" fill="#4CAF50"/>
+  <ellipse cx="240" cy="135" rx="8" ry="5" fill="#4CAF50"/>
+  <ellipse cx="260" cy="135" rx="8" ry="5" fill="#4CAF50"/>
+  <text x="250" y="180" text-anchor="middle" font-size="12">Plant</text>
+  
+  <!-- Mature Plant -->
+  <rect x="348" y="120" width="4" height="40" fill="#4CAF50"/>
+  <ellipse cx="335" cy="115" rx="12" ry="8" fill="#4CAF50"/>
+  <ellipse cx="365" cy="115" rx="12" ry="8" fill="#4CAF50"/>
+  <ellipse cx="350" cy="105" rx="10" ry="6" fill="#4CAF50"/>
+  <circle cx="350" cy="95" r="6" fill="#FFEB3B"/>
+  <text x="350" y="180" text-anchor="middle" font-size="12">Flower</text>
+</svg>

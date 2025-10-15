@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="150" height="100" xmlns="http://www.w3.org/2000/svg">
+  <!-- German Flag -->
+  <rect x="0" y="0" width="150" height="33.33" fill="#000000"/>
+  <rect x="0" y="33.33" width="150" height="33.33" fill="#DD0000"/>
+  <rect x="0" y="66.66" width="150" height="33.34" fill="#FFCE00"/>
+  <rect x="0" y="0" width="150" height="100" fill="none" stroke="#333" stroke-width="2"/>
+</svg>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minimal Tauri Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover { background: #0056b3; }
+        pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 Minimal Tauri Profile Test</h1>
+    <p>This is a basic test to verify Tauri communication and profile functionality.</p>
+    
+    <div id="status" class="status info">Ready to test...</div>
+    
+    <div>
+        <button onclick="testConnection()">1. Test Tauri Connection</button>
+        <button onclick="testProfiles()">2. Test Profile Loading</button>
+        <button onclick="createProfile()">3. Create Test Profile</button>
+        <button onclick="testDatabase()">4. Test Database Stats</button>
+    </div>
+    
+    <div id="output"></div>
+
+    <script type="module">
+        let invoke;
+        
+        // Initialize Tauri API
+        try {
+            const tauriApi = await import('@tauri-apps/api/core');
+            invoke = tauriApi.invoke;
+            updateStatus('✅ Tauri API loaded successfully', 'success');
+        } catch (error) {
+            updateStatus('❌ Failed to load Tauri API: ' + error, 'error');
+        }
+
+        function updateStatus(message, type = 'info') {
+            const statusEl = document.getElementById('status');
+            statusEl.textContent = message;
+            statusEl.className = `status ${type}`;
+            console.log(message);
+        }
+
+        function updateOutput(content) {
+            document.getElementById('output').innerHTML = content;
+        }
+
+        window.testConnection = async function() {
+            updateStatus('Testing Tauri connection...', 'info');
+            
+            if (!invoke) {
+                updateStatus('❌ Tauri API not available', 'error');
+                return;
+            }
+            
+            try {
+                // Test a simple command
+                const version = await invoke('get_database_version');
+                updateStatus('✅ Tauri connection successful!', 'success');
+                updateOutput(`<h3>Connection Test Result:</h3><pre>Database Version: ${version}</pre>`);
+            } catch (error) {
+                updateStatus('❌ Tauri connection failed: ' + error, 'error');
+                updateOutput(`<h3>Connection Error:</h3><pre>${error}</pre>`);
+            }
+        };
+
+        window.testProfiles = async function() {
+            updateStatus('Testing profile loading...', 'info');
+            
+            if (!invoke) {
+                updateStatus('❌ Tauri API not available', 'error');
+                return;
+            }
+            
+            try {
+                const profiles = await invoke('get_all_profiles');
+                updateStatus(`✅ Profiles loaded successfully! Found ${profiles.length} profiles`, 'success');
+                updateOutput(`<h3>Profile Test Result:</h3><pre>${JSON.stringify(profiles, null, 2)}</pre>`);
+            } catch (error) {
+                updateStatus('❌ Profile loading failed: ' + error, 'error');
+                updateOutput(`<h3>Profile Error:</h3><pre>${error}</pre>`);
+            }
+        };
+
+        window.createProfile = async function() {
+            updateStatus('Creating test profile...', 'info');
+            
+            if (!invoke) {
+                updateStatus('❌ Tauri API not available', 'error');
+                return;
+            }
+            
+            try {
+                const request = {
+                    name: 'Test User ' + Date.now(),
+                    avatar: '🧪',
+                    theme_preference: 'default'
+                };
+                
+                const profile = await invoke('create_profile', { request });
+                updateStatus('✅ Profile created successfully!', 'success');
+                updateOutput(`<h3>Created Profile:</h3><pre>${JSON.stringify(profile, null, 2)}</pre>`);
+                
+                // Auto-reload profiles
+                setTimeout(testProfiles, 500);
+            } catch (error) {
+                updateStatus('❌ Profile creation failed: ' + error, 'error');
+                updateOutput(`<h3>Creation Error:</h3><pre>${error}</pre>`);
+            }
+        };
+
+        window.testDatabase = async function() {
+            updateStatus('Testing database stats...', 'info');
+            
+            if (!invoke) {
+                updateStatus('❌ Tauri API not available', 'error');
+                return;
+            }
+            
+            try {
+                const stats = await invoke('get_database_stats');
+                updateStatus('✅ Database stats retrieved!', 'success');
+                updateOutput(`<h3>Database Stats:</h3><pre>${stats}</pre>`);
+            } catch (error) {
+                updateStatus('❌ Database stats failed: ' + error, 'error');
+                updateOutput(`<h3>Database Error:</h3><pre>${error}</pre>`);
+            }
+        };
+
+        // Auto-run connection test
+        setTimeout(() => {
+            if (invoke) {
+                testConnection();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

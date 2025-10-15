@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="300" fill="#87ceeb"/>
+  
+  <!-- Continents (simplified) -->
+  
+  <!-- North America -->
+  <path d="M50 80 Q80 60 120 80 L140 120 Q130 140 100 150 L80 140 Q60 120 50 80" fill="#90EE90" stroke="#333" stroke-width="1"/>
+  <text x="95" y="115" font-family="Arial" font-size="10" fill="#333">North America</text>
+  
+  <!-- South America -->
+  <path d="M90 160 Q100 150 110 160 L120 200 Q115 220 105 230 L95 220 Q85 200 90 160" fill="#90EE90" stroke="#333" stroke-width="1"/>
+  <text x="102" y="195" font-family="Arial" font-size="8" fill="#333">South America</text>
+  
+  <!-- Europe (with UK highlighted) -->
+  <path d="M250 70 Q280 60 320 70 L340 100 Q330 120 300 130 L270 120 Q240 100 250 70" fill="#98FB98" stroke="#333" stroke-width="1"/>
+  <text x="295" y="100" font-family="Arial" font-size="10" fill="#333">Europe</text>
+  
+  <!-- United Kingdom (highlighted) -->
+  <circle cx="280" cy="150" r="8" fill="#FF6B6B" stroke="#333" stroke-width="2"/>
+  <text x="290" y="155" font-family="Arial" font-size="8" fill="#333">UK</text>
+  
+  <!-- Africa -->
+  <path d="M280 140 Q320 130 350 140 L370 200 Q360 240 330 250 L300 240 Q270 200 280 140" fill="#90EE90" stroke="#333" stroke-width="1"/>
+  <text x="325" y="195" font-family="Arial" font-size="10" fill="#333">Africa</text>
+  
+  <!-- Asia -->
+  <path d="M380 60 Q450 50 520 60 L540 120 Q530 140 480 150 L430 140 Q360 120 380 60" fill="#90EE90" stroke="#333" stroke-width="1"/>
+  <text x="450" y="105" font-family="Arial" font-size="10" fill="#333">Asia</text>
+  
+  <!-- Australia -->
+  <path d="M450 200 Q480 190 510 200 L520 220 Q515 235 490 240 L470 235 Q445 220 450 200" fill="#90EE90" stroke="#333" stroke-width="1"/>
+  <text x="485" y="220" font-family="Arial" font-size="8" fill="#333">Australia</text>
+  
+  <!-- Title -->
+  <text x="300" y="25" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#333">World Map</text>
+  
+  <!-- Instructions -->
+  <text x="300" y="280" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Click on the United Kingdom</text>
+</svg>

@@ -28,3 +28,4 @@ Suggested actions to produce a fully auditable license bundle
 -----------------------------------------------------------
 - Frontend: `npm ls --json` and inspect each dependency's license field.
 - Backend: from `src-tauri/` run `cargo license --json` (install `cargo-license`) to produce a detailed list of crates and their licenses.
+

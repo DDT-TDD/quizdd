@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#f9f9f9"/>
+  
+  <!-- Title -->
+  <text x="200" y="25" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#333">Count the Objects</text>
+  
+  <!-- Apples -->
+  <circle cx="50" cy="80" r="20" fill="#ff6b6b"/>
+  <circle cx="120" cy="80" r="20" fill="#ff6b6b"/>
+  <circle cx="190" cy="80" r="20" fill="#ff6b6b"/>
+  <circle cx="260" cy="80" r="20" fill="#ff6b6b"/>
+  <circle cx="330" cy="80" r="20" fill="#ff6b6b"/>
+  
+  <!-- Apple stems -->
+  <rect x="48" y="60" width="4" height="10" fill="#8b4513"/>
+  <rect x="118" y="60" width="4" height="10" fill="#8b4513"/>
+  <rect x="188" y="60" width="4" height="10" fill="#8b4513"/>
+  <rect x="258" y="60" width="4" height="10" fill="#8b4513"/>
+  <rect x="328" y="60" width="4" height="10" fill="#8b4513"/>
+  
+  <!-- Stars -->
+  <polygon points="50,140 55,150 65,150 57,158 60,168 50,162 40,168 43,158 35,150 45,150" fill="#ffd700"/>
+  <polygon points="120,140 125,150 135,150 127,158 130,168 120,162 110,168 113,158 105,150 115,150" fill="#ffd700"/>
+  <polygon points="190,140 195,150 205,150 197,158 200,168 190,162 180,168 183,158 175,150 185,150" fill="#ffd700"/>
+  <polygon points="260,140 265,150 275,150 267,158 270,168 260,162 250,168 253,158 245,150 255,150" fill="#ffd700"/>
+  <polygon points="330,140 335,150 345,150 337,158 340,168 330,162 320,168 323,158 315,150 325,150" fill="#ffd700"/>
+  <polygon points="50,180 55,190 65,190 57,198 60,208 50,202 40,208 43,198 35,190 45,190" fill="#ffd700"/>
+  <polygon points="120,180 125,190 135,190 127,198 130,208 120,202 110,208 113,198 105,190 115,190" fill="#ffd700"/>
+  
+  <!-- Labels -->
+  <text x="200" y="120" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">🍎 Apples: ___</text>
+  <text x="200" y="230" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">⭐ Stars: ___</text>
+</svg>

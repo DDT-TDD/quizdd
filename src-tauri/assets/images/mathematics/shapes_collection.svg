@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="400" fill="#f0f8ff"/>
+  
+  <!-- Triangle 1 -->
+  <polygon points="150,50 100,150 200,150" fill="#ff6b6b" stroke="#333" stroke-width="2"/>
+  <text x="150" y="130" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Triangle</text>
+  
+  <!-- Circle -->
+  <circle cx="350" cy="100" r="50" fill="#4ecdc4" stroke="#333" stroke-width="2"/>
+  <text x="350" y="105" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Circle</text>
+  
+  <!-- Square -->
+  <rect x="50" y="200" width="100" height="100" fill="#45b7d1" stroke="#333" stroke-width="2"/>
+  <text x="100" y="255" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Square</text>
+  
+  <!-- Triangle 2 -->
+  <polygon points="350,150 300,250 400,250" fill="#ff6b6b" stroke="#333" stroke-width="2"/>
+  <text x="350" y="230" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Triangle</text>
+  
+  <!-- Rectangle -->
+  <rect x="200" y="200" width="120" height="80" fill="#96ceb4" stroke="#333" stroke-width="2"/>
+  <text x="260" y="245" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Rectangle</text>
+  
+  <!-- Triangle 3 -->
+  <polygon points="250,280 200,350 300,350" fill="#ff6b6b" stroke="#333" stroke-width="2"/>
+  <text x="250" y="330" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Triangle</text>
+  
+  <!-- Pentagon -->
+  <polygon points="400,300 430,280 450,310 420,340 380,340" fill="#feca57" stroke="#333" stroke-width="2"/>
+  <text x="415" y="315" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Pentagon</text>
+</svg>

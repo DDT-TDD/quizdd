@@ -1,0 +1,271 @@
+/* Quiz Timer Styles */
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  border: 2px solid var(--color-primary-light);
+  min-width: 120px;
+  transition: all 0.3s ease;
+}
+
+.timer.warning {
+  border-color: var(--color-warning);
+  background: rgba(255, 193, 7, 0.1);
+  animation: warningPulse 1s infinite;
+}
+
+.timer.critical {
+  border-color: var(--color-danger);
+  background: rgba(220, 53, 69, 0.1);
+  animation: criticalPulse 0.5s infinite;
+}
+
+.timerIcon {
+  font-size: 1.5rem;
+  animation: tick 1s infinite;
+}
+
+.timerDisplay {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeText {
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  color: var(--color-text);
+  z-index: 2;
+  position: relative;
+}
+
+.timer.warning .timeText {
+  color: var(--color-warning-dark);
+}
+
+.timer.critical .timeText {
+  color: var(--color-danger);
+  animation: textFlash 0.5s infinite;
+}
+
+.progressRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+}
+
+.progressSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progressBackground {
+  fill: none;
+  stroke: var(--color-background-secondary);
+  stroke-width: 2;
+}
+
+.progressForeground {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+.normalProgress {
+  stroke: var(--color-primary);
+}
+
+.warningProgress {
+  stroke: var(--color-warning);
+}
+
+.criticalProgress {
+  stroke: var(--color-danger);
+  animation: progressFlash 0.5s infinite;
+}
+
+.warningMessage,
+.criticalMessage {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  animation: messageSlide 0.3s ease-out;
+}
+
+.warningMessage {
+  background: var(--color-warning-light);
+  color: var(--color-warning-dark);
+  border: 1px solid var(--color-warning);
+}
+
+.criticalMessage {
+  background: var(--color-danger-light);
+  color: var(--color-danger-dark);
+  border: 1px solid var(--color-danger);
+}
+
+/* Animations */
+@keyframes tick {
+  0%, 50% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes warningPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+  }
+}
+
+@keyframes criticalPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(220, 53, 69, 0);
+  }
+}
+
+@keyframes textFlash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes progressFlash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes messageSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timer {
+    padding: 0.75rem;
+    min-width: 100px;
+  }
+  
+  .timerIcon {
+    font-size: 1.25rem;
+  }
+  
+  .timeText {
+    font-size: 1rem;
+  }
+  
+  .progressRing {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .warningMessage,
+  .criticalMessage {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer {
+    padding: 0.5rem;
+    min-width: 80px;
+  }
+  
+  .timerIcon {
+    font-size: 1rem;
+  }
+  
+  .timeText {
+    font-size: 0.875rem;
+  }
+  
+  .progressRing {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .progressForeground {
+    stroke-width: 2;
+  }
+  
+  .progressBackground {
+    stroke-width: 1.5;
+  }
+}
+
+/* High contrast theme support */
+[data-theme="high-contrast"] .timer {
+  background: var(--color-surface);
+  border-color: var(--color-text);
+}
+
+[data-theme="high-contrast"] .timer.warning {
+  border-color: var(--color-warning);
+  background: var(--color-surface);
+}
+
+[data-theme="high-contrast"] .timer.critical {
+  border-color: var(--color-danger);
+  background: var(--color-surface);
+}
+
+[data-theme="high-contrast"] .timeText {
+  color: var(--color-text);
+}
+
+[data-theme="high-contrast"] .progressBackground {
+  stroke: var(--color-text-secondary);
+}
+
+[data-theme="high-contrast"] .normalProgress {
+  stroke: var(--color-primary);
+}
+
+[data-theme="high-contrast"] .warningMessage {
+  background: var(--color-warning);
+  color: var(--color-background);
+  border-color: var(--color-text);
+}
+
+[data-theme="high-contrast"] .criticalMessage {
+  background: var(--color-danger);
+  color: var(--color-background);
+  border-color: var(--color-text);
+}

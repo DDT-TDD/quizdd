@@ -1,0 +1,366 @@
+.profileDashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Profile Header */
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--surface-color, #ffffff);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--border-color, #e0e0e0);
+}
+
+.profileAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-color, #2196F3), var(--secondary-color, #4CAF50));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.profileInfo {
+  flex: 1;
+}
+
+.profileName {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary, #333333);
+  line-height: 1.2;
+}
+
+.profileSubtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-secondary, #666666);
+}
+
+/* Progress Statistics */
+.progressStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.statCard {
+  background: var(--surface-color, #ffffff);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--border-color, #e0e0e0);
+  transition: transform 0.2s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent-color, #2196F3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary, #333333);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666666);
+  font-weight: 500;
+}
+
+/* Chart Section */
+.chartSection {
+  width: 100%;
+}
+
+.progressChart {
+  width: 100%;
+}
+
+/* Achievement Section */
+.achievementSection {
+  width: 100%;
+}
+
+.achievementGrid {
+  width: 100%;
+}
+
+/* Subject Breakdown */
+.subjectBreakdown {
+  background: var(--surface-color, #ffffff);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--border-color, #e0e0e0);
+}
+
+.subjectBreakdown h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary, #333333);
+}
+
+.subjectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.subjectCard {
+  background: var(--background-color, #f5f5f5);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border-color, #e0e0e0);
+  transition: all 0.2s ease;
+}
+
+.subjectCard:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subjectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.subjectHeader h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary, #333333);
+}
+
+.keyStage {
+  background: var(--accent-color, #2196F3);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.subjectStats {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.subjectStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary, #333333);
+  line-height: 1;
+}
+
+.statText {
+  font-size: 0.7rem;
+  color: var(--text-secondary, #666666);
+  margin-top: 2px;
+}
+
+/* Loading and Error States */
+.loadingState,
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  text-align: center;
+  background: var(--surface-color, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--border-color, #e0e0e0);
+}
+
+.loadingSpinner,
+.errorIcon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.loadingState p,
+.errorState p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: var(--text-secondary, #666666);
+}
+
+.errorState h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary, #333333);
+}
+
+.retryButton {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: var(--accent-color, #2196F3);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retryButton:hover {
+  background: var(--accent-color-dark, #1976D2);
+  transform: translateY(-1px);
+}
+
+.retryButton:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profileDashboard {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .profileHeader {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .profileAvatar {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .profileName {
+    font-size: 1.5rem;
+  }
+
+  .profileSubtitle {
+    font-size: 1rem;
+  }
+
+  .progressStats {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .statCard {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .statIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .statValue {
+    font-size: 1.5rem;
+  }
+
+  .subjectBreakdown {
+    padding: 16px;
+  }
+
+  .subjectList {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileDashboard {
+    padding: 12px;
+  }
+
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .progressStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .statCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .statIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .statValue {
+    font-size: 1.3rem;
+  }
+
+  .statLabel {
+    font-size: 0.8rem;
+  }
+
+  .subjectStats {
+    gap: 8px;
+  }
+
+  .statNumber {
+    font-size: 1rem;
+  }
+
+  .statText {
+    font-size: 0.6rem;
+  }
+}

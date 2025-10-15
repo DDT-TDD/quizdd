@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Debug Test</title>
+</head>
+<body>
+    <h1>Profile System Debug Test</h1>
+    <div id="output"></div>
+    <button onclick="testProfiles()">Test Profile Loading</button>
+    <button onclick="createTestProfile()">Create Test Profile</button>
+
+    <script type="module">
+        import { invoke } from '@tauri-apps/api/core';
+
+        window.testProfiles = async function() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<p>Testing profile loading...</p>';
+            
+            try {
+                console.log('🔍 Debug: Calling get_all_profiles...');
+                const profiles = await invoke('get_all_profiles');
+                console.log('✅ Debug: Profiles received:', profiles);
+                output.innerHTML = `<p>✅ Success! Found ${profiles.length} profiles:</p><pre>${JSON.stringify(profiles, null, 2)}</pre>`;
+            } catch (error) {
+                console.error('❌ Debug: Error:', error);
+                output.innerHTML = `<p>❌ Error: ${error}</p>`;
+            }
+        };
+
+        window.createTestProfile = async function() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<p>Creating test profile...</p>';
+            
+            try {
+                const request = {
+                    name: 'Debug Test Child',
+                    avatar: '🧪',
+                    theme_preference: 'default'
+                };
+                
+                console.log('🔍 Debug: Creating profile with:', request);
+                const profile = await invoke('create_profile', { request });
+                console.log('✅ Debug: Profile created:', profile);
+                output.innerHTML = `<p>✅ Profile created successfully!</p><pre>${JSON.stringify(profile, null, 2)}</pre>`;
+            } catch (error) {
+                console.error('❌ Debug: Error creating profile:', error);
+                output.innerHTML = `<p>❌ Error creating profile: ${error}</p>`;
+            }
+        };
+
+        // Auto-test on load
+        window.addEventListener('load', () => {
+            setTimeout(testProfiles, 1000);
+        });
+    </script>
+</body>
+</html>

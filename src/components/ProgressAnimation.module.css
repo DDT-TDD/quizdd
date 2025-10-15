@@ -1,0 +1,269 @@
+.container {
+  display: inline-block;
+  position: relative;
+}
+
+/* Circular Progress Styles */
+.circularContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.circularSvg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.progressCircle {
+  filter: drop-shadow(0 0 4px rgba(76, 175, 80, 0.3));
+}
+
+.percentageText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Sparkle effects */
+.sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 12px;
+  animation: sparkleFloat 2s ease-in-out infinite;
+}
+
+.sparkle1 { top: 10%; left: 20%; animation-delay: 0s; }
+.sparkle2 { top: 20%; right: 15%; animation-delay: 0.3s; }
+.sparkle3 { bottom: 25%; left: 10%; animation-delay: 0.6s; }
+.sparkle4 { bottom: 15%; right: 20%; animation-delay: 0.9s; }
+.sparkle5 { top: 50%; left: 5%; animation-delay: 1.2s; }
+.sparkle6 { top: 50%; right: 5%; animation-delay: 1.5s; }
+
+/* Linear Progress Styles */
+.linearContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.linearTrack {
+  flex: 1;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.linearFill {
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #4CAF50, #66BB6A);
+}
+
+.shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shine 2s ease-in-out infinite;
+}
+
+.linearPercentage {
+  font-weight: bold;
+  font-size: 14px;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Wave Progress Styles */
+.waveContainer {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.waveBackground {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.waveAnimation {
+  width: 200%;
+  height: 100%;
+  position: relative;
+  background: #4CAF50;
+}
+
+.waveTop {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: inherit;
+  border-radius: 50%;
+  animation: waveMotion 3s ease-in-out infinite;
+}
+
+.wavePercentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  z-index: 10;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Size variants */
+.small.circularContainer {
+  width: 60px;
+  height: 60px;
+}
+
+.small .percentageText {
+  font-size: 12px;
+}
+
+.small.waveContainer {
+  width: 60px;
+  height: 60px;
+}
+
+.small.linearContainer .linearTrack {
+  height: 8px;
+}
+
+.small .linearPercentage {
+  font-size: 12px;
+}
+
+.medium.circularContainer {
+  width: 100px;
+  height: 100px;
+}
+
+.medium .percentageText {
+  font-size: 16px;
+}
+
+.medium.waveContainer {
+  width: 100px;
+  height: 100px;
+}
+
+.medium.linearContainer .linearTrack {
+  height: 12px;
+}
+
+.medium .linearPercentage {
+  font-size: 14px;
+}
+
+.large.circularContainer {
+  width: 150px;
+  height: 150px;
+}
+
+.large .percentageText {
+  font-size: 24px;
+}
+
+.large.waveContainer {
+  width: 150px;
+  height: 150px;
+}
+
+.large.linearContainer .linearTrack {
+  height: 16px;
+}
+
+.large .linearPercentage {
+  font-size: 18px;
+}
+
+/* Animations */
+@keyframes sparkleFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes waveMotion {
+  0%, 100% {
+    transform: translateX(0) scaleY(1);
+  }
+  25% {
+    transform: translateX(-25%) scaleY(1.1);
+  }
+  50% {
+    transform: translateX(-50%) scaleY(0.9);
+  }
+  75% {
+    transform: translateX(-75%) scaleY(1.1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .large.circularContainer {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .large .percentageText {
+    font-size: 20px;
+  }
+  
+  .large.waveContainer {
+    width: 120px;
+    height: 120px;
+  }
+}

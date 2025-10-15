@@ -1,0 +1,402 @@
+.wrapper {
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fade Animations */
+.fade.enter {
+  animation-name: fadeIn;
+}
+
+.fade.exit {
+  animation-name: fadeOut;
+}
+
+/* Slide Animations */
+.slide.enter {
+  animation-name: slideIn;
+}
+
+.slide.exit {
+  animation-name: slideOut;
+}
+
+.slideUp.enter {
+  animation-name: slideInUp;
+}
+
+.slideUp.exit {
+  animation-name: slideOutUp;
+}
+
+.slideDown.enter {
+  animation-name: slideInDown;
+}
+
+.slideDown.exit {
+  animation-name: slideOutDown;
+}
+
+.slideLeft.enter {
+  animation-name: slideInLeft;
+}
+
+.slideLeft.exit {
+  animation-name: slideOutLeft;
+}
+
+.slideRight.enter {
+  animation-name: slideInRight;
+}
+
+.slideRight.exit {
+  animation-name: slideOutRight;
+}
+
+/* Scale Animations */
+.scale.enter {
+  animation-name: scaleIn;
+}
+
+.scale.exit {
+  animation-name: scaleOut;
+}
+
+/* Bounce Animations */
+.bounce.enter {
+  animation-name: bounceIn;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.bounce.exit {
+  animation-name: bounceOut;
+}
+
+/* Flip Animations */
+.flip.enter {
+  animation-name: flipIn;
+}
+
+.flip.exit {
+  animation-name: flipOut;
+}
+
+.flipUp.enter {
+  animation-name: flipInX;
+}
+
+.flipUp.exit {
+  animation-name: flipOutX;
+}
+
+.flipLeft.enter {
+  animation-name: flipInY;
+}
+
+.flipLeft.exit {
+  animation-name: flipOutY;
+}
+
+/* Keyframe Definitions */
+
+/* Fade */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Slide */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Scale */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Bounce */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* Flip */
+@keyframes flipIn {
+  from {
+    transform: perspective(400px) rotateY(-90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotateY(-10deg);
+    opacity: 1;
+  }
+  70% {
+    transform: perspective(400px) rotateY(10deg);
+  }
+  to {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOut {
+  from {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+  30% {
+    transform: perspective(400px) rotateY(-15deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotateX(-10deg);
+    opacity: 1;
+  }
+  70% {
+    transform: perspective(400px) rotateX(10deg);
+  }
+  to {
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOutX {
+  from {
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+  30% {
+    transform: perspective(400px) rotateX(-15deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotateY(-10deg);
+    opacity: 1;
+  }
+  70% {
+    transform: perspective(400px) rotateY(10deg);
+  }
+  to {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOutY {
+  from {
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+  30% {
+    transform: perspective(400px) rotateY(-15deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (prefers-reduced-motion: reduce) {
+  .wrapper {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Reduce animation intensity on mobile */
+  .wrapper {
+    animation-duration: 200ms !important;
+  }
+}

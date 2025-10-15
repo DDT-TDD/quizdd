@@ -1,0 +1,41 @@
+[package]
+name = "quizdd"
+version = "1.0.0"
+description = "QuiZDD - Educational quiz application for Key Stage 1 and 2 children"
+authors = ["you"]
+license = ""
+repository = ""
+default-run = "quizdd"
+edition = "2021"
+rust-version = "1.60"
+
+[build-dependencies]
+tauri-build = { version = "1.0", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "1.0", features = [ "protocol-asset", "shell-open", "fs-create-dir", "fs-exists", "fs-read-dir", "fs-read-file", "fs-remove-dir", "fs-remove-file", "fs-rename-file", "fs-write-file", "path-all"] }
+rusqlite = { version = "0.29", features = ["bundled", "chrono"] }
+tokio = { version = "1.0", features = ["full"] }
+thiserror = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+reqwest = { version = "0.11", features = ["json"] }
+url = "2.4"
+hex = "0.4"
+sha2 = "0.10"
+rsa = "0.9"
+log = "0.4"
+
+[dev-dependencies]
+tempfile = "3.0"
+tokio-test = "0.4"
+mockall = "0.11"
+
+[[bin]]
+name = "seed_database"
+path = "src/bin/seed_database.rs"
+
+[features]
+default = [ "custom-protocol" ]
+custom-protocol = [ "tauri/custom-protocol" ]

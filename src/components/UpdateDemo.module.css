@@ -1,0 +1,185 @@
+.updateDemo {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--surface-color, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color, #e0e0e0);
+}
+
+.header h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color, #2196f3);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header p {
+  margin: 0;
+  color: var(--text-secondary, #666);
+  font-size: 1.1rem;
+}
+
+.statusMessage {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.statusMessage.success {
+  background: var(--success-light, #e8f5e8);
+  color: var(--success-color, #4caf50);
+  border-left: 4px solid var(--success-color, #4caf50);
+}
+
+.statusMessage.error {
+  background: var(--error-light, #ffebee);
+  color: var(--error-color, #d32f2f);
+  border-left: 4px solid var(--error-color, #d32f2f);
+}
+
+.actions {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.toggleButton {
+  background: var(--primary-color, #2196f3);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.toggleButton:hover {
+  background: var(--primary-dark, #1976d2);
+  transform: translateY(-1px);
+}
+
+.updateManagerContainer {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--surface-light, #f9f9f9);
+  border-radius: 12px;
+  border: 2px solid var(--border-color, #e0e0e0);
+}
+
+.features,
+.security {
+  margin: 2rem 0;
+}
+
+.features h3,
+.security h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary, #333);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.features ul,
+.security ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li,
+.security li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary, #666);
+  font-size: 1rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.features li::before {
+  content: '✅';
+  flex-shrink: 0;
+}
+
+.security li::before {
+  content: '🔒';
+  flex-shrink: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .updateDemo {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .toggleButton {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .updateManagerContainer {
+    padding: 1rem;
+  }
+
+  .features li,
+  .security li {
+    font-size: 0.9rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .updateDemo {
+    border: 2px solid var(--text-primary, #000);
+  }
+
+  .updateManagerContainer {
+    border-width: 3px;
+  }
+
+  .statusMessage {
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  .statusMessage.success {
+    border-color: var(--success-color, #4caf50);
+  }
+
+  .statusMessage.error {
+    border-color: var(--error-color, #d32f2f);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .toggleButton {
+    transition: none;
+  }
+
+  .toggleButton:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="500" fill="#f9f9f9"/>
+  
+  <!-- Human body outline -->
+  <ellipse cx="200" cy="80" rx="40" ry="50" fill="#fdbcb4" stroke="#333" stroke-width="2"/>
+  <!-- Head -->
+  
+  <!-- Neck -->
+  <rect x="190" y="130" width="20" height="30" fill="#fdbcb4" stroke="#333" stroke-width="2"/>
+  
+  <!-- Torso -->
+  <ellipse cx="200" cy="250" rx="60" ry="90" fill="#e8f4fd" stroke="#333" stroke-width="2"/>
+  
+  <!-- Arms -->
+  <ellipse cx="130" cy="220" rx="15" ry="60" fill="#fdbcb4" stroke="#333" stroke-width="2"/>
+  <ellipse cx="270" cy="220" rx="15" ry="60" fill="#fdbcb4" stroke="#333" stroke-width="2"/>
+  
+  <!-- Legs -->
+  <ellipse cx="170" cy="380" rx="20" ry="80" fill="#fdbcb4" stroke="#333" stroke-width="2"/>
+  <ellipse cx="230" cy="380" rx="20" ry="80" fill="#fdbcb4" stroke="#333" stroke-width="2"/>
+  
+  <!-- Organs -->
+  
+  <!-- Brain -->
+  <ellipse cx="200" cy="70" rx="25" ry="20" fill="#ff9999" stroke="#333" stroke-width="1"/>
+  <text x="200" y="50" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Brain</text>
+  
+  <!-- Heart (clickable area) -->
+  <path d="M190 170 Q185 160 175 165 Q165 170 175 185 L200 210 L225 185 Q235 170 225 165 Q215 160 210 170 Q205 165 200 170 Q195 165 190 170" fill="#ff6b6b" stroke="#333" stroke-width="2"/>
+  <text x="200" y="155" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Heart</text>
+  
+  <!-- Lungs -->
+  <ellipse cx="170" cy="200" rx="20" ry="30" fill="#87ceeb" stroke="#333" stroke-width="1"/>
+  <ellipse cx="230" cy="200" rx="20" ry="30" fill="#87ceeb" stroke="#333" stroke-width="1"/>
+  <text x="150" y="190" font-family="Arial" font-size="8" fill="#333">Lung</text>
+  <text x="240" y="190" font-family="Arial" font-size="8" fill="#333">Lung</text>
+  
+  <!-- Stomach -->
+  <ellipse cx="185" cy="260" rx="25" ry="20" fill="#98fb98" stroke="#333" stroke-width="1"/>
+  <text x="185" y="250" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">Stomach</text>
+  
+  <!-- Liver -->
+  <ellipse cx="220" cy="240" rx="20" ry="15" fill="#dda0dd" stroke="#333" stroke-width="1"/>
+  <text x="220" y="230" text-anchor="middle" font-family="Arial" font-size="8" fill="#333">Liver</text>
+  
+  <!-- Title -->
+  <text x="200" y="25" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#333">Human Body</text>
+  
+  <!-- Instructions -->
+  <text x="200" y="480" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Click on the heart</text>
+</svg>
