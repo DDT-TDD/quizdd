@@ -1,0 +1,1 @@
+// ...existing code from vite.config.ts will be copied here
