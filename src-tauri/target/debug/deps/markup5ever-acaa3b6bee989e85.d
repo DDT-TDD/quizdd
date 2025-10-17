@@ -1,0 +1,15 @@
+C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\deps\libmarkup5ever-acaa3b6bee989e85.rmeta: C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\lib.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\data\mod.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\interface\mod.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\interface\tree_builder.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\serialize.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\util\buffer_queue.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\util\smallcharset.rs C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\build\markup5ever-e9b58c0fc77eb840\out/generated.rs C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\build\markup5ever-e9b58c0fc77eb840\out/named_entities.rs
+
+C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\deps\markup5ever-acaa3b6bee989e85.d: C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\lib.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\data\mod.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\interface\mod.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\interface\tree_builder.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\serialize.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\util\buffer_queue.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\util\smallcharset.rs C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\build\markup5ever-e9b58c0fc77eb840\out/generated.rs C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\build\markup5ever-e9b58c0fc77eb840\out/named_entities.rs
+
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\lib.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\data\mod.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\interface\mod.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\interface\tree_builder.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\serialize.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\util\buffer_queue.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\markup5ever-0.11.0\util\smallcharset.rs:
+C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\build\markup5ever-e9b58c0fc77eb840\out/generated.rs:
+C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\build\markup5ever-e9b58c0fc77eb840\out/named_entities.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\DD\\Desktop\\QZ\\GIT_SYNC_SOURCE\\src-tauri\\target\\debug\\build\\markup5ever-e9b58c0fc77eb840\\out

@@ -1,0 +1,1 @@
+cargo:rustc-link-search=native=C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\build\webview2-com-sys-29f449a4f225b977\out\x64

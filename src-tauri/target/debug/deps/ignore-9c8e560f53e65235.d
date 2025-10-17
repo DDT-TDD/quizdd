@@ -1,0 +1,12 @@
+C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\deps\libignore-9c8e560f53e65235.rmeta: C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\lib.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\default_types.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\dir.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\gitignore.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\overrides.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\pathutil.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\types.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\walk.rs
+
+C:\Users\DD\Desktop\QZ\GIT_SYNC_SOURCE\src-tauri\target\debug\deps\ignore-9c8e560f53e65235.d: C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\lib.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\default_types.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\dir.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\gitignore.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\overrides.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\pathutil.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\types.rs C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\walk.rs
+
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\lib.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\default_types.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\dir.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\gitignore.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\overrides.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\pathutil.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\types.rs:
+C:\Users\DD\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ignore-0.4.23\src\walk.rs:
